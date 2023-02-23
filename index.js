@@ -40,10 +40,12 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
+function kopyala(marketRafi){
   /*kod buraya*/
+  const orijinalTatlarKopyala = [...marketteneVarsa];
+  return orijinalTatlarKopyala; 
 }
-
+console.log("Elif Alışverişte", kopyala(orijinalTatlar));
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,10 +58,17 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
+function dizi25Cesitmi(kartonKoliKutu){
   /*kod buraya*/
+  if(kartonKoliKutu.length == 25){
+  return true;
+} else {
+  return false;
+}
+  console.log("25mi?", kartonKoliKutu.length);
 }
 
+dizi25Cesitmi(orijinalTatlar);
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -74,7 +83,7 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
+function cesitEkle(sampleArray){
   /*kod buraya*/
 }
 
@@ -92,10 +101,11 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
+
 function sonCesitiKaldir(/*kod buraya*/){
   /*kod buraya*/
+ 
 }
-
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -128,10 +138,14 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
+function ismeGoreCesitCikar(tatlar, alerjen){ 
   /*kod buraya*/
+  const exitIndex = tatlar.indexOf(alerjen);
+  tatlar.splice(exitIndex, 1);
+  return tatlar;
 }
 
+ismeGoreCesitCikar(orijinalTatlar, "Tarçın");
 
 /* Görev 7:
 
@@ -154,9 +168,24 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(malzemelerKolisi, filtrelenecek) {
+  let newArray = [];
+  for (let i = 0; i < malzemelerKolisi.length; i++) {
+   let elimdekiAbur = malzemelerKolisi[i];
+    if(malzemelerKolisi.includes(eleman)) {
+     newArraypush(elimdekiAbur);
+    }
+      
+  }
+  
+console.log("newArray", newArray);
+return newArray;
 }
+  /*kod buraya*/
+  ismeGoreFiltrele(orijinalTatlar,"dı");
+  ismeGoreFiltrele(Fındıklı, "Çikolata");
+  
+
 
 
 
